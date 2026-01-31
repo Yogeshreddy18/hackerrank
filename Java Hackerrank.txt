@@ -1,0 +1,181 @@
+Java String Introduction:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        
+        System.out.println(A.length()+B.length());
+        
+        if(A.compareTo(B)>0){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+        
+        String capA = A.substring(0, 1).toUpperCase() + A.substring(1);
+        String capB = B.substring(0, 1).toUpperCase() + B.substring(1);
+
+        System.out.println(capA + " " + capB);
+
+        sc.close();
+        
+    }
+}
+
+
+Java String Reverse:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        
+        if(s.equals(sb.toString())){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+        
+    }
+}
+
+Java BigInteger:-
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.math.BigInteger;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        BigInteger a = new BigInteger(scan.nextLine());
+        BigInteger b = new BigInteger(scan.nextLine());
+        
+        System.out.println(a.add(b));
+        System.out.println(a.multiply(b));
+    }
+}
+
+Java 1D Array:-
+
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+	   
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+int[]a=new int[n];
+for (int i=0;i<n;i++){
+    a[i]=scan.nextInt();
+    
+}
+
+        scan.close();
+
+        // Prints each sequential element in array a
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+
+
+Java Int to String:-
+
+import java.util.*;
+import java.security.*;
+public class Solution {
+ public static void main(String[] args) {
+
+  DoNotTerminate.forbidExit();
+
+  try {
+   Scanner in = new Scanner(System.in);
+   int n = in .nextInt();
+   in.close();
+   //String s=???; Complete this line below
+
+   String s=String.valueOf(n);
+
+   
+   if (n == Integer.parseInt(s)) {
+    System.out.println("Good job");
+   } else {
+    System.out.println("Wrong answer.");
+   }
+  } catch (DoNotTerminate.ExitTrappedException e) {
+   System.out.println("Unsuccessful Termination!!");
+  }
+ }
+}
+
+//The following class will prevent you from terminating the code using exit(0)!
+class DoNotTerminate {
+
+ public static class ExitTrappedException extends SecurityException {
+
+  private static final long serialVersionUID = 1;
+ }
+
+ public static void forbidExit() {
+  final SecurityManager securityManager = new SecurityManager() {
+   @Override
+   public void checkPermission(Permission permission) {
+    if (permission.getName().contains("exitVM")) {
+     throw new ExitTrappedException();
+    }
+   }
+  };
+  System.setSecurityManager(securityManager);
+ }
+}
+
+
+Java End-of-file:-
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number=1;
+        
+        while(sc.hasNextLine()){
+            String line = sc.nextLine();
+            System.out.println(number + " " + line);
+              number++;
+}
+
+
+sc.close();
+}
+}
+

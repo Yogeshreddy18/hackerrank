@@ -1,0 +1,183 @@
+1)Welcome To Java:-
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println("Hello, World.");
+        System.out.print("Hello, Java.");
+    }
+}
+
+
+2)Java Stdin and Stdout I:-
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (scanner.hasNextInt()) {
+            int number = scanner.nextInt();
+            System.out.println(number);
+        }
+
+        scanner.close();
+    }
+}
+
+
+3)Java If-Else:-
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.close();
+
+        if (N % 2 != 0) {
+            System.out.println("Weird");
+        } else {
+            if (N >= 2 && N <= 5) {
+                System.out.println("Not Weird");
+            } else if (N >= 6 && N <= 20) {
+                System.out.println("Weird");
+            } else {
+                System.out.println("Not Weird");
+            }
+        }
+    }
+}
+
+
+
+4)Java Stdin and Stdout II:-
+
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int i = sc.nextInt();
+        double d = sc.nextDouble();
+        sc.nextLine();          
+        String s = sc.nextLine();
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+
+        sc.close();
+    }
+}
+
+
+5)Java Output Formatting:-
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("================================");
+
+        for (int i = 0; i < 3; i++) {
+            String s = sc.next();
+            int x = sc.nextInt();
+            System.out.printf("%-15s%03d%n", s, x);
+        }
+
+        System.out.println("================================");
+        sc.close();
+    }
+}
+
+
+6)Java Loops I:-
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(N + " x " + i + " = " + (N * i));
+        }
+
+        sc.close();
+    }
+}
+
+
+7)Java Loops II:-
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int q = sc.nextInt();  
+
+        for (int i = 0; i < q; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = sc.nextInt();
+
+            int sum = a;
+
+            for (int j = 0; j < n; j++) {
+                sum += (1 << j) * b;   
+                System.out.print(sum + " ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+}
+
+
+8)Java DataTypes:-
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh)
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        for(int i = 0; i < t; i++)
+        {
+            try
+            {
+                long x = sc.nextLong();
+                System.out.println(x + " can be fitted in:");
+
+                if(x >= -128 && x <= 127)
+                    System.out.println("* byte");
+
+                if(x >= -32768 && x <= 32767)
+                    System.out.println("* short");
+
+                if(x >= -2147483648L && x <= 2147483647L)
+                    System.out.println("* int");
+
+               
+                System.out.println("* long");
+            }
+            catch(Exception e)
+            {
+                System.out.println(sc.next() + " can't be fitted anywhere.");
+            }
+        }
+        sc.close();
+    }
+}
+
